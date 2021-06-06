@@ -51,6 +51,8 @@ namespace RestWithASPNETUdemy
             // Injetando uma dependência
             services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
             services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+            services.AddScoped<IBookBusiness, BookBusinessImplementation>();
+            services.AddScoped<IBookRepository, BookRepositoryImplementation>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
