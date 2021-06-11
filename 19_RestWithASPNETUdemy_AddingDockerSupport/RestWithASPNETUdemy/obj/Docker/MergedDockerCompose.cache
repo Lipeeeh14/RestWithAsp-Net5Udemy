@@ -1,0 +1,15 @@
+services:
+  restwithaspnetudemy:
+    build:
+      context: E:\ADS FATEC\Cursos\DOTNET\RestWithASP-NET5Udemy\RestWithAsp-Net5Udemy\19_RestWithASPNETUdemy_AddingDockerSupport\RestWithASPNETUdemy
+      dockerfile: RestWithASPNETUdemy/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: restwithaspnetudemy
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\MINEIRO\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+version: '3.4'
